@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PortsConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <UserID>9316560980975348002</UserID>
+  <Tcp>6040</Tcp>
+  <Udp>6040</Udp>
+</PortsConfig>
