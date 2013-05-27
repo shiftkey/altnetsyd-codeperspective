@@ -1,0 +1,1 @@
+.\sb -u http://localhost/Store/Details/{{{ID}}} -f .\values.csv -n 1000
