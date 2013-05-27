@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ThreadsDemo2
+namespace ThreadsDemo
 {
     class Program
     {
@@ -36,7 +35,8 @@ namespace ThreadsDemo2
 
             var foo = new CustomClass();
             foo.AddItems();
-          
+            foo.CreateTempFile();
+
             // have a nap
             Thread.Sleep(Random.Next(5000, 10000));
 
@@ -60,26 +60,6 @@ namespace ThreadsDemo2
         private static void UpdateMessage()
         {
             Console.WriteLine("{0} tasks running", count);
-        }
-    }
-
-    public class CustomClass
-    {
-        public CustomClass()
-        {
-            Id = Guid.NewGuid();
-        }
-
-        public Guid Id { get; set; }
-
-        public void AddItems()
-        {
-            // create some objects
-            var list = new List<int>();
-            for (var i = 0; i < 20; i++)
-            {
-                list.Add(i);
-            }
         }
     }
 }
