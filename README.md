@@ -14,4 +14,6 @@ Slides:
 
  - PDF (and therefore gif-less): https://dl.dropboxusercontent.com/u/5803705/altnetsyd-codeperspective.pdf
 
+I also mention SuperBenchmarker during the talk, which can be found [here](https://github.com/aliostad/SuperBenchmarker#readme)
+
 More words coming soon
