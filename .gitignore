@@ -215,3 +215,6 @@ pip-log.txt
 .mr.developer.cfg
 
 *.DotSettings
+
+CodePerspective/Remote
+CodePerspective/recompile
