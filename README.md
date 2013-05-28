@@ -8,4 +8,10 @@ I'll elaborate more on it later but the three key points:
  - it's got some rough edges
  - I'd love to contribute to it but it's not easy to get started
 
+Slides: 
+
+ - PPTX: https://dl.dropboxusercontent.com/u/5803705/altnetsyd-codeperspective.pptx
+
+ - PDF (and therefore gif-less): https://dl.dropboxusercontent.com/u/5803705/altnetsyd-codeperspective.pdf
+
 More words coming soon
