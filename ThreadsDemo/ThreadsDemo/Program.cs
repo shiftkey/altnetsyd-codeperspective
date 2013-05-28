@@ -19,7 +19,8 @@ namespace ThreadsDemo
 
             while (!DidTheUserPressTheQKey())
             {
-                IncrementCount();
+                count++;
+                UpdateMessage();
                 Task.Factory.StartNew(SomeBoringTask);
             }
         }
@@ -33,26 +34,17 @@ namespace ThreadsDemo
         {
             Pool.WaitOne();
 
-            var foo = new CustomClass();
-            foo.AddItems();
-            foo.CreateTempFile();
+            // do something in the task
+            var item = new CustomClass();
+            item.AddItems();
+            item.CreateTempFile();
 
             // have a nap
             Thread.Sleep(Random.Next(5000, 10000));
 
+            Console.WriteLine("Task {0} finished", item.Id);
             // release the semaphore
             Pool.Release();
-            DecrementCount();
-        }
-
-        private static void IncrementCount()
-        {
-            count++;
-            UpdateMessage();
-        }
-
-        private static void DecrementCount()
-        {
             count--;
             UpdateMessage();
         }
