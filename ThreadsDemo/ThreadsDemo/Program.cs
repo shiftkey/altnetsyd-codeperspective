@@ -8,16 +8,15 @@ namespace ThreadsDemo
     {
         static readonly Random Random = new Random();
         static readonly Semaphore Pool = new Semaphore(0, 2);
-        static int count = 0;
+        static int count;
 
-        static void Main(string[] args)
+        static void Main()
         {
             Pool.Release(2);
             UpdateMessage();
             
             Console.WriteLine("Press Q to quit. Press enter to start a new task");
-
-            while (!DidTheUserPressTheQKey())
+            while (Console.ReadKey(true).Key != ConsoleKey.Q)
             {
                 count++;
                 UpdateMessage();
@@ -25,12 +24,7 @@ namespace ThreadsDemo
             }
         }
 
-        private static bool DidTheUserPressTheQKey()
-        {
-            return Console.ReadKey(true).Key == ConsoleKey.Q;
-        }
-
-        private static void SomeBoringTask()
+        static void SomeBoringTask()
         {
             Pool.WaitOne();
 
@@ -49,7 +43,7 @@ namespace ThreadsDemo
             UpdateMessage();
         }
 
-        private static void UpdateMessage()
+        static void UpdateMessage()
         {
             Console.WriteLine("{0} tasks running", count);
         }
