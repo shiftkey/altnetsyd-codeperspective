@@ -1,1 +1,1 @@
-.\sb -u http://localhost/ -n 10000 -c 10
+.\sb -u http://localhost/ -n 1000 -c 2
